@@ -1,11 +1,8 @@
 import logging
 
 logger = logging.getLogger(__name__)
-logger.basicConfig(level=logging.DEBUG)
+logger.setLevel(logging.DEBUG)
+logger.addHandler(logging.StreamHandler())
 
-logging.info('Script Starting')
-
-# stuff
-print("doing stuff")
-
-logging.info('Script Finsihed')
+logger.info("script started")
+logger.info("script finished")
